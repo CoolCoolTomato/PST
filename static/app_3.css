@@ -1,0 +1,283 @@
+.app_3_warp{
+    width: 100%;
+    height: 80%;
+    top: 15%;
+    left: 0;
+    position: absolute;
+}
+.app_3_title{
+    width: 50%;
+    height: 30%;
+    top: -2rem;
+    left: 4%;
+    position: absolute;
+}
+.app_3_title h2{
+    text-align: center;
+    font-size: 9rem;
+    color: aliceblue;
+}
+.mode_warp{
+    width: 49%;
+    height: 68%;
+    top: 28%;
+    left: 4%;
+    position: absolute;
+    border-radius: 6rem;
+    box-shadow: 2rem 2rem 3.5rem #0d0d0d,
+             -2rem -2rem 3.5rem #333333;
+    overflow: hidden;
+}
+.mode_contain{
+    width: 200%;
+    height: 90%;
+    left: 0;
+    top: 0;
+    position: absolute;
+}
+.mode{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    float: left;
+    transform: translateX(100%);
+    transition: all 0.5s ease-out;
+}
+.mode_contain input{
+    visibility: hidden;
+    position: absolute;
+}
+.mode_contain input:checked + .mode{
+    transform: translateX(0);
+}
+.app_3_msg{
+    width: 80%;
+    height: 80%;
+    top: -10%;
+    left: 10%;
+    position: absolute;
+}
+.app_3_msg :first-child{
+    font-size: 8rem;
+    color: aliceblue;
+    text-align: center;
+    text-indent: 0;
+    top: 0;
+    position: relative;
+}
+.app_3_msg p{
+    font-size: 3.5rem;
+    color: gray;
+    text-indent: 6rem;
+    top: 0;
+    position: relative;
+}
+.mode a{
+    color: violet;
+    font-size: 3.5rem;
+    text-decoration: none;
+    bottom: 8%;
+}
+.mode a:hover{
+    color: slateblue;
+}
+.mode_a_l{
+    left: 10rem;
+    position: absolute;
+}
+.mode_a_r{
+    right: 10rem;
+    position: absolute;
+}
+.app_3_select{
+    left: 50%;
+    bottom: 3rem;
+    position: absolute;
+    transform: translateX(-50%);
+    display: flex;
+}
+.app_3_select label{
+    width: 7.5rem;
+    height: 1.5rem;
+    background-color: gray;
+    margin: 1rem;
+    transition: 0.4s;
+    cursor: pointer;
+}
+.app_3_select label:hover{
+    background-color: aliceblue;
+}
+.app_3_tool{
+    top: 8%;
+}
+.app_3_api{
+    bottom: 5%;
+}
+.app_3_other{
+    width: 37%;
+    height: 42%;
+    right: 4%;
+    position: absolute;
+}
+.app_3_other h2{
+    font-size: 7.5rem;
+    color: aliceblue;
+    top: -3rem;
+    left: 20rem;
+    position: absolute;
+}
+.app_3_other p{
+    font-size: 3rem;
+    text-indent: 6rem;
+    color: gray;
+    top: 13rem;
+    position: absolute;
+}
+.app_3_other a{
+    color: violet;
+    font-size: 3.5rem;
+    text-decoration: none;
+    top: 30rem;
+    position: absolute;
+}
+.app_3_other a:hover{
+    color: slateblue;
+}
+/*-------------*/
+#the_way{
+    width: 80%;
+    height: 80%;
+    left: 10%;
+    top: 10%;
+    position: absolute;
+    background-color: #181819;
+    border-radius: 6rem;
+    box-shadow:  0 0 3rem inset #0d0d0d;
+}
+#the_way pre{
+    width: 90%;
+    height: 80%;
+    left: 5%;
+    top: 5%;
+    position: absolute;
+    font-family: "微软雅黑";
+    font-size: 3rem;
+    color: gray;
+    word-break: break-all;
+    white-space: pre-wrap;
+    overflow-y: scroll;
+}
+/*-------------*/
+.app_3_content_warp{
+    /*猜猜我是干什么的  ==v==  */
+}
+.app_3_content_left{
+    width: 64%;
+    height: 88%;
+    left: 5%;
+    top: 8%;
+    position: absolute;
+    border-radius: 6rem;
+    box-shadow: 2rem 2rem 3.5rem #0d0d0d,
+             -2rem -2rem 3.5rem #333333;
+}
+.app_3_content_left_warp{
+    width: 90%;
+    height: 90%;
+    left: 5%;
+    top: 5%;
+    position: absolute;
+    overflow-y: scroll;
+}
+.app_3_content{
+    width: 47%;
+    height: 20rem;
+    float: left;
+    transition: all 0.5s ease-in-out;
+    transform-style: preserve-3d;
+}
+.app_3_content_1{
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: relative;
+    background-color: #202020;
+}
+.app_3_content_1 p:first-child{
+    font-size: 3rem;
+    color: aliceblue;
+}
+.app_3_content_1 p{
+    width: 90%;
+    font-size: 2.5rem;
+    color: gray;
+    word-break: break-all;
+}
+.app_3_content_2{
+    width: 100%;
+    height: 100%;
+    top: -2rem;
+    position: relative;
+    background-color: #202020;
+    transform: rotateY(180deg) translateZ(1px) translateY(-100%);
+}
+.app_3_content_2 p{
+    width: 90%;
+    font-size: 2.5rem;
+    color: gray;
+    position: relative;
+    word-break: break-all;
+}
+.app_3_content:active{
+    transform: rotateY(180deg);
+}
+.app_3_content_right{
+    width: 20%;
+    height: 88%;
+    background-color: #202020;
+    right: 4%;
+    top: 8%;
+    position: absolute;
+    border-radius: 6rem;
+    box-shadow: 2rem 2rem 3.5rem #0d0d0d,
+             -2rem -2rem 3.5rem #333333;
+}
+.app_3_content_right p{
+    top: -2rem;
+    font-size: 5rem;
+    position: relative;
+    text-align: center;
+    color: aliceblue;
+}
+.app_3_title_select{
+    height: 75%;
+    width: 80%;
+    left: 10%;
+    bottom: 10%;
+    position: absolute;
+    overflow-y: scroll;
+}
+.app_3_title_select p{
+    text-align: center;
+    font-size: 4rem;
+}
+.app_3_title_select a{
+    text-decoration: none;
+    color: violet;
+}
+.app_3_title_select a:hover{
+    color: slateblue;
+}
+.app_3_title_select::-webkit-scrollbar, .app_3_content_left_warp::-webkit-scrollbar, #the_way pre::-webkit-scrollbar{
+    width: 1rem;
+    border-radius: 0.5rem;
+}
+.app_3_title_select::-webkit-scrollbar-track, .app_3_content_left_warp::-webkit-scrollbar-track, #the_way pre::-webkit-scrollbar-track{
+    background-color: #303030;
+    border-radius: 0.5rem;
+}
+.app_3_title_select::-webkit-scrollbar-thumb, .app_3_content_left_warp::-webkit-scrollbar-thumb, #the_way pre::-webkit-scrollbar-thumb{
+    background-color: violet;
+    border-radius: 0.5rem;
+}

@@ -1,0 +1,67 @@
+.topic_warp{
+    width: 1536px;
+    height: 650px;
+    top: 110px;
+    position: absolute;
+}
+.tt {
+    width: 300px;
+    height: 250px;
+    border-radius: 50px;
+    position: absolute;
+    box-shadow:  15px 15px 30px #0d0d0d,
+             -15px -15px 30px #333333;
+}
+.beef{
+    top: 45px;
+    left: 50px;
+}
+.leetcode{
+    bottom: 40px;
+    left: 140px;
+}
+.blue{
+    top: 45px;
+    left: 425px;
+}
+.hiho{
+    bottom: 40px;
+    left: 620px;
+}
+.pytip{
+    top: 45px;
+    right: 425px;
+}
+.lint{
+    bottom: 40px;
+    right: 140px;
+}
+.saima{
+    top: 45px;
+    right: 50px;
+}
+.topic_title{
+    text-align: center;
+    font-size: 30px;
+    color: aliceblue;
+}
+.topic_content{
+    width: 80%;
+    top: 60px;
+    left: 10%;
+    position: absolute;
+    text-indent: 40px;
+    font-size: 20px;
+    color: gray;
+}
+.tt a{
+    font-size: 20px;
+    color: violet;
+    text-decoration: none;
+    bottom: 40px;
+    left: 10%;
+    position: absolute;
+}
+.tt a:hover{
+    color: slateblue;
+}

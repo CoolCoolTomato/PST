@@ -1,0 +1,43 @@
+.topic_warp{
+    width: 90%;
+    height: 80%;
+    top: 15%;
+    left: 5%;
+    position: absolute;
+}
+.tt {
+    width: 32rem;
+    height: 32rem;
+    border-radius: 5rem;
+    box-shadow:  15px 15px 30px #0d0d0d,
+             -15px -15px 30px #333333;
+    float: left;
+    margin-left: 6rem;
+    margin-right: 6rem;
+    margin-top: 8rem;
+}
+.topic_title{
+    text-align: center;
+    font-size: 3rem;
+    color: aliceblue;
+}
+.topic_content{
+    width: 80%;
+    left: 10%;
+    text-indent: 5rem;
+    font-size: 2.5rem;
+    color: gray;
+    position: relative;
+}
+.tt a{
+    font-size: 2.5rem;
+    color: violet;
+    text-decoration: none;
+    bottom: 4rem;
+    top: 3%;
+    left: 10%;
+    position: relative;
+}
+.tt a:hover{
+    color: slateblue;
+}

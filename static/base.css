@@ -1,0 +1,389 @@
+html{
+    font-size: 10px;
+    font-family: 微软雅黑;
+}
+body {
+    background-color: #202020;
+    padding: 0;
+    margin: 0;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #303030;
+    border-radius: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: violet;
+    border-radius: 5px;
+}
+
+/*----------------------------------------*/
+.index_list {
+    width: 100%;
+    height: 15%;
+    position: absolute;
+}
+
+.logo {
+    height: 10rem;
+    width: 10rem;
+    top: 35%;
+    left: 6%;
+    position: absolute;
+    background-color: #202020;
+    box-shadow: 0 0 4rem black;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.logo img {
+    width: 90%;
+    height: 90%;
+    right: 5%;
+    bottom: 5%;
+    position: absolute;
+}
+
+.warp_btn {
+    height: 70%;
+    width: 70%;
+    top: 30%;
+    right: 0;
+    position: absolute;
+}
+
+.button {
+    overflow: hidden;
+    height: 10rem;
+    width: 10rem;
+    float: right;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    border-radius: 4rem;
+    transition: all 0.5s ease-out;
+    box-shadow: 2rem 2rem 3.5rem #0d0d0d,
+    -2rem -2rem 3.5rem #333333;
+}
+
+.button:hover {
+    width: 23rem;
+}
+
+.button:hover .img {
+    background-color: violet;
+}
+
+.img {
+    display: inline-block;
+    background-color: #202020;
+    height: 10rem;
+    width: 10rem;
+    border-radius: 4rem;
+    transition: all 0.5s ease-out;
+}
+
+.img img {
+    width: 6rem;
+    height: 6rem;
+    left: 2rem;
+    top: 1.5rem;
+    position: relative;
+}
+
+.button a {
+    left: 2rem;
+    top: 0.5rem;
+    font-size: 4rem;
+    text-decoration: none;
+    color: violet;
+    position: relative;
+}
+
+.form {
+    width: 25%;
+    height: 8.2rem;
+    left: 20%;
+    top: 36%;
+    position: absolute;
+    border-radius: 3rem;
+    box-shadow: 2rem 2rem 3.5rem #0d0d0d,
+    -2rem -2rem 3.5rem #333333;
+}
+.search {
+    left: 10%;
+    bottom: 1.5rem;
+    width: 72%;
+    height: 4.5rem;
+    outline: none;
+    border: none;
+    color: aliceblue;
+    padding-left: 2rem;
+    position: absolute;
+    font-size: 3rem;
+    background: none;
+}
+
+.btn {
+    height: 4rem;
+    width: 4rem;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: url("fdj3.png") no-repeat;
+    background-size: 100% auto;
+}
+
+.safe {
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+}
+
+.safe a {
+    text-decoration: none;
+    color: #555555;
+    font-size: 1.8rem;
+    transition: all 0.4s;
+}
+
+.safe span {
+    color: #555555;
+    font-size: 1rem;
+}
+
+.safe a:hover {
+    color: #cccccc;
+}
+/*---------------
+@media screen and (max-width: 3300px){
+    html{
+        font-size: 16.5px;
+    }
+}
+@media screen and (max-height: 1650px){
+    html{
+        font-size: 16.5px;
+    }
+}
+@media screen and (max-width: 3200px){
+    html{
+        font-size: 16px;
+    }
+}
+@media screen and (max-height: 1600px){
+    html{
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 3100px){
+    html{
+        font-size: 15.5px;
+    }
+}
+@media screen and (max-height: 1550px){
+    html{
+        font-size: 15.5px;
+    }
+}
+@media screen and (max-width: 3000px){
+    html{
+        font-size: 15px;
+    }
+}
+@media screen and (max-height: 1500px){
+    html{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 2900px){
+    html{
+        font-size: 14.5px;
+    }
+}
+@media screen and (max-height: 1450px){
+    html{
+        font-size: 14.5px;
+    }
+}
+@media screen and (max-width: 2800px){
+    html{
+        font-size: 14px;
+    }
+}
+@media screen and (max-height: 1400px){
+    html{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 2700px){
+    html{
+        font-size: 13.5px;
+    }
+}
+@media screen and (max-height: 1350px){
+    html{
+        font-size: 13.5px;
+    }
+}
+@media screen and (max-width: 2600px){
+    html{
+        font-size: 13px;
+    }
+}
+@media screen and (max-height: 1300px){
+    html{
+        font-size: 13px;
+    }
+}
+@media screen and (max-width: 2500px){
+    html{
+        font-size: 12.5px;
+    }
+}
+@media screen and (max-height: 1250px){
+    html{
+        font-size: 12.5px;
+    }
+}
+@media screen and (max-width: 2400px){
+    html{
+        font-size: 12px;
+    }
+}
+@media screen and (max-height: 1200px){
+    html{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 2300px){
+    html{
+        font-size: 11.5px;
+    }
+}
+@media screen and (max-height: 1150px){
+    html{
+        font-size: 11.5px;
+    }
+}
+@media screen and (max-width: 2200px){
+    html{
+        font-size: 11px;
+    }
+}
+@media screen and (max-height: 1100px){
+    html{
+        font-size: 11px;
+    }
+}
+@media screen and (max-width: 2100px){
+    html{
+        font-size: 10.5px;
+    }
+}
+@media screen and (max-height: 1050px){
+    html{
+        font-size: 10.5px;
+    }
+}
+@media screen and (max-width: 2000px){
+    html{
+        font-size: 10px;
+    }
+}
+@media screen and (max-height: 1000px){
+    html{
+        font-size: 10px;
+    }
+}
+@media screen and (max-width: 1900px){
+    html{
+        font-size: 9.5px;
+    }
+}
+@media screen and (max-height: 950px){
+    html{
+        font-size: 9.5px;
+    }
+}
+@media screen and (max-width: 1800px){
+    html{
+        font-size: 9px;
+    }
+}
+@media screen and (max-height: 900px){
+    html{
+        font-size: 9px;
+    }
+}
+@media screen and (max-width: 1700px){
+    html{
+        font-size: 8.5px;
+    }
+}
+@media screen and (max-height: 850px){
+    html{
+        font-size: 8.5px;
+    }
+}
+@media screen and (max-width: 1600px){
+    html{
+        font-size: 8px;
+    }
+}
+@media screen and (max-height: 800px){
+    html{
+        font-size: 8px;
+    }
+}
+@media screen and (max-width: 1500px){
+    html{
+        font-size: 7.5px;
+    }
+}
+@media screen and (max-height: 750px){
+    html{
+        font-size: 7.5px;
+    }
+}
+@media screen and (max-width: 1400px){
+    html{
+        font-size: 7px;
+    }
+}
+@media screen and (max-height: 700px){
+    html{
+        font-size: 8px;
+    }
+}
+@media screen and (max-width: 1300px){
+    html{
+        font-size: 6.5px;
+    }
+}
+@media screen and (max-height: 650px){
+    html{
+        font-size: 6.5px;
+    }
+}
+@media screen and (max-width: 1200px){
+    html{
+        font-size: 6px;
+    }
+}
+@media screen and (max-height: 600px){
+    html{
+        font-size: 6px;
+    }
+}
+ */

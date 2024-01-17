@@ -1,0 +1,101 @@
+.about_warp{
+    width: 1536px;
+    height: 670px;
+    top: 110px;
+    left: 0;
+    position: absolute;
+    background-image: linear-gradient(155deg, #601060, #106010, #656565);
+}
+.about_warp .warp_a{
+    width: 450px;
+    height: 450px;
+    position: absolute;
+    transform: perspective(800px) rotateY(0deg);
+	transition: 1s;
+	transform-style: preserve-3d;
+}
+.warp_a:hover{
+    transform:perspective(800px) rotateY(180deg);
+}
+.t1{
+    width: 80%;
+    height: 80%;
+    left: 10%;
+    top: 10%;
+    position: absolute;
+    border-radius: 60px;
+    backface-visibility: hidden;
+}
+.t2{
+    width: 80%;
+    height: 80%;
+    left: 10%;
+    top: 10%;
+    position: absolute;
+    border-radius: 60px;
+    transform: rotateY(180deg) translateZ(1px);
+    backface-visibility: hidden;
+}
+.t1 p{
+    width: 90%;
+    height: 45%;
+    left: 5%;
+    top: 5%;
+    position: absolute;
+    font-size: 65px;
+    text-align: center;
+    color: aliceblue;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+.t1 img{
+    width: 45%;
+    height: 45%;
+    left: 27.5%;
+    bottom: 5%;
+    position: absolute;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.t2 p{
+    width: 90%;
+    height: 90%;
+    left: 5%;
+    top: 5%;
+    position: absolute;
+    font-size: 20px;
+    color: aliceblue;
+    text-indent: 45px;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+.technology{
+    left: 20px;
+    top: 0;
+    position: absolute;
+}
+.technology div{
+    box-shadow: 0 0 40px violet;
+}
+.say{
+    left: 520px;
+    top: 200px;
+    position: absolute;
+}
+.say div{
+    box-shadow: 0 0 40px yellow;
+}
+.wechat{
+    left: 1020px;
+    top: 90px;
+    position: absolute;
+}
+.wechat div{
+    box-shadow: 0 0 40px lightblue;
+}
