@@ -1,0 +1,58 @@
+#search_res{
+    color: aliceblue;
+    font-size: 10rem;
+    text-align: center;
+}
+#search_warp{
+    width: 100%;
+    height: 80%;
+    top: 15%;
+    left: 0;
+    position: absolute;
+}
+#search_contain{
+    width: 90%;
+    height: 90%;
+    left: 5%;
+    top: 0;
+    position: absolute;
+}
+#search_result{
+    width: 90%;
+    height: 90%;
+    left: 5%;
+    top: 5%;
+    position: absolute;
+}
+.search_result{
+    float: left;
+    background-color: #181819;
+    width: 20%;
+    height: 30rem;
+    margin: 2.4%;
+    overflow: hidden;
+    border-radius: 2rem;
+}
+.search_result p{
+    color: aliceblue;
+    font-size: 2rem;
+}
+.search_result a{
+    color: violet;
+    text-decoration: none;
+    font-size: 2rem;
+}
+.highlighted {
+    color: yellow;
+}
+#search_bar{
+    bottom: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+}
+#search_bar a{
+    font-size: 2rem;
+    color: violet;
+    text-decoration: none;
+}

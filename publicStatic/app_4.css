@@ -1,0 +1,97 @@
+.app_4_warp{
+    width: 100%;
+    height: 80%;
+    top: 15%;
+    left: 0;
+    position: absolute;
+}
+#app_4_left{
+    width: 64%;
+    height: 88%;
+    left: 5%;
+    top: 8%;
+    position: absolute;
+    background-color: #181819;
+    border-radius: 6rem;
+    box-shadow: 0 0 3rem inset #0d0d0d;
+}
+#app_4_content{
+    width: 90%;
+    height: 90%;
+    left: 5%;
+    top: 5%;
+    position: absolute;
+    overflow-y: scroll;
+}
+#app_4_content pre{
+    width: 90%;
+    height: auto;
+    white-space: pre-wrap;
+    font-family: "微软雅黑";
+    color: #cccccc;
+    font-size: 3rem;
+}
+#app_4_right{
+    width: 20%;
+    height: 88%;
+    background-color: #202020;
+    right: 4%;
+    top: 8%;
+    position: absolute;
+    border-radius: 6rem;
+    box-shadow: 2rem 2rem 3.5rem #0d0d0d,
+             -2rem -2rem 3.5rem #333333;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#app_4_right p{
+    text-align: center;
+    font-size: 4rem;
+    color: aliceblue;
+}
+#app_4_list{
+    height: 75%;
+    width: 80%;
+    left: 10%;
+    bottom: 10%;
+    position: absolute;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+#app_4_list div{
+    height: 9rem;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    background-color: #202020;
+}
+#app_4_list p{
+    text-align: center;
+    font-size: 3.5rem;
+    color: lightblue;
+}
+#app_4_list a{
+    height: 5rem;
+    text-decoration: none;
+    color: violet;
+    text-align: center;
+    display: block;
+    font-size: 3rem;
+}
+#app_4_list a:hover{
+    color: slateblue;
+}
+#app_4_list::-webkit-scrollbar, #app_4_content::-webkit-scrollbar{
+    width: 1rem;
+    border-radius: 0.5rem;
+}
+#app_4_list::-webkit-scrollbar-track, #app_4_content::-webkit-scrollbar-track{
+    background-color: #303030;
+    border-radius: 0.5rem;
+}
+#app_4_list::-webkit-scrollbar-thumb, #app_4_content::-webkit-scrollbar-thumb{
+    background-color: violet;
+    border-radius: 0.5rem;
+}

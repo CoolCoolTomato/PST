@@ -1,0 +1,216 @@
+.feedback_warp{
+    width: 100%;
+    height: 80%;
+    top: 15%;
+    left: 0;
+    position: absolute;
+}
+.hint {
+    height: 85%;
+    width: 36%;
+    top: 8%;
+    left: 5%;
+    position: absolute;
+    background-color: #202020;
+    border-radius: 10rem;
+    box-shadow: 2rem 2rem 3.5rem #0d0d0d,
+             -2rem -2rem 3.5rem #333333;
+    /*box-shadow: 15px 15px 30px #0d0d0d,
+        -15px -15px 30px #333333;*/
+}
+.hint h2{
+    width: 90%;
+    height: 40%;
+    left: 5%;
+    top: 0;
+    position: absolute;
+    color: aliceblue;
+    font-size: 7rem;
+    text-align: center;
+    letter-spacing: 1rem;
+}
+.hint p{
+    width: 90%;
+    height: 60%;
+    left: 5%;
+    bottom: 0;
+    position: absolute;
+    font-size: 4rem;
+    color: gray;
+    text-indent: 6rem;
+    letter-spacing: 0.5rem;
+}
+.forms{
+    height: 100%;
+    width: 50%;
+    top: 2%;
+    right: 3%;
+    position: absolute;
+}
+.feedback_submit{
+    width: 16rem;
+    height: 16rem;
+    left: 0;
+    top: 16%;
+    border-radius: 50%;
+    position: absolute;
+}
+.feedback_submit input{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #202020;
+    border: none;
+    color: violet;
+    font-size: 10rem;
+    transition: all 1s ease-in-out;
+}
+.feedback_submit :hover{
+    border: 2rem solid lightblue;
+}
+.feedback_submit input:hover {
+    color: lightblue;
+}
+.kind_warp{
+    width: 65%;
+    height: 12%;
+    left: 20%;
+    top: 5%;
+    position: absolute;
+    border-radius: 4rem;
+    box-shadow: 2rem 2rem 3.5rem #0d0d0d,
+             -2rem -2rem 3.5rem #333333;
+}
+.kind_warp_p{
+    width: 40%;
+    height: 100%;
+    left: 0;
+    top: -5%;
+    position: absolute;
+}
+.kind_warp_p p{
+    width: 100%;
+    height: 100%;
+    font-size: 3rem;
+    color: gray;
+    left: 25%;
+    top: 0;
+    position: absolute;
+    letter-spacing: 0.5rem;
+}
+.kind{
+    width: 50%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    position: absolute;
+}
+.kind select{
+    width: 80%;
+    height: 80%;
+    left: 10%;
+    top: 10%;
+    position: absolute;
+    appearance: none;
+    background: url("jt.png") no-repeat right center transparent;
+    border: none;
+    font-size: 3rem;
+    letter-spacing: 0.5rem;
+    color: aliceblue;
+    outline: 0;
+}
+.kind option{
+    background-color: #303030;
+    font-size: 2.5rem;
+    letter-spacing: 0.5rem;
+    color: aliceblue;
+}
+.contact_warp{
+    width: 65%;
+    height: 13%;
+    right: 0;
+    top: 24%;
+    position: absolute;
+}
+.contact{
+    width: 100%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    position: absolute;
+    border-radius: 4rem;
+    box-shadow: 2rem 2rem 3.5rem #0d0d0d,
+             -2rem -2rem 3.5rem #333333;
+}
+.contact input{
+    width: 80%;
+    height: 80%;
+    left: 10%;
+    top: 10%;
+    background: none;
+    border: none;
+    outline: 0;
+    font-size: 3rem;
+    color: aliceblue;
+    position: absolute;
+}
+.details{
+    width: 100%;
+    height: 50%;
+    left: 0;
+    top: 45%;
+    position: absolute;
+    border-radius: 7rem;
+    box-shadow: 2rem 2rem 3.5rem #0d0d0d,
+             -2rem -2rem 3.5rem #333333;
+}
+.details textarea{
+    width: 86%;
+    height: 80%;
+    left: 7%;
+    top: 10%;
+    position: absolute;
+    resize: none;
+    font-family: "微软雅黑";
+    font-size: 3rem;
+    color: aliceblue;
+    letter-spacing: 0.2rem;
+    background: none;
+    border: none;
+    outline: none;
+}
+.details textarea::-webkit-scrollbar{
+    width: 1rem;
+    border-radius: 0.5rem;
+}
+.details textarea::-webkit-scrollbar-track{
+    background-color: gray;
+    border-radius: 0.5rem;
+}
+.details textarea::-webkit-scrollbar-thumb{
+    background-color: violet;
+    border-radius: 0.5rem;
+}
+/*.tip{
+    width: 60%;
+    height: 60%;
+    background-color: #202020;
+    left: 20%;
+    top: 20%;
+    position: absolute;
+    border-radius: 60px;
+    box-shadow: inset 0 0 60px black;
+}
+.tip p{
+    width: 80%;
+    height: 40%;
+    left: 10%;
+    position: absolute;
+    text-align: center;
+    color: aliceblue;
+    font-size: 80px;
+    letter-spacing: 5px;
+}
+.tip p:first-child{
+    top: 40%;
+}*/

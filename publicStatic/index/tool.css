@@ -1,0 +1,279 @@
+.tool_warp{
+    width: 100%;
+    height: 80%;
+    top: 15%;
+    left: 0;
+    position: absolute;
+}
+.tool_hello{
+    /*文字不可选中*/
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    /*----------*/
+    width: 100%;
+    height: 30rem;
+    top: 20%;
+    right: 2%;
+    position: absolute;
+    font-size: 25rem;
+    color: violet;
+    text-align: center;
+    overflow: hidden;
+}
+.workbench{
+    width: 50%;
+    height: 90%;
+    top: 10%;
+    right: 4%;
+    position: absolute;
+}
+.encode_text{
+    width: 100%;
+    height: 35%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    border-radius: 3rem;
+    background-color: #181819;
+    box-shadow: 0 0 15px inset #0d0d0d;
+}
+.encode_text textarea{
+    width: 90%;
+    height: 80%;
+    left: 5%;
+    top: 10%;
+    position: absolute;
+    color: aliceblue;
+    font-size: 3rem;
+    font-family: "微软雅黑";
+    letter-spacing: 0.2rem;
+    resize: none;
+    background: none;
+    border: none;
+    outline: none;
+}
+.mode_change{
+    width: 80%;
+    height: 30%;
+    left: 0;
+    top: 40%;
+    position: absolute;
+}
+.mode_change p{
+    line-height: 0;
+    color: aliceblue;
+    font-size: 4rem;
+    display: block;
+    float: left;
+}
+.mode_change input{
+    visibility: hidden;
+    position: absolute;
+}
+.mode_change input:checked+label{
+    color: violet;
+}
+.mode_change label{
+    width: 25%;
+    border-radius: 2rem;
+    display: block;
+    float: left;
+    margin-left: 3%;
+    font-size: 3rem;
+    color: gray;
+    text-align: center;
+    background-color: #181819;
+    line-height: 7rem;
+    box-shadow: 0 0 2rem inset #0d0d0d;
+}
+.workbench input[type='submit']{
+    right: 0;
+    top: 40%;
+    position: absolute;
+    width: 18%;
+    height: 12%;
+    background-color: #181819;
+    border-radius: 2rem;
+    font-size: 3rem;
+    color: violet;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 2rem inset #0d0d0d;
+}
+.decode_text{
+    font-size: 3rem;
+    color: aliceblue;
+    width: 100%;
+    height: 35%;
+    left: 0;
+    top: 55%;
+    border-radius: 3rem;
+    background-color: #181819;
+    position: absolute;
+    box-shadow: 0 0 2rem inset #0d0d0d;
+}
+.decode_text_warp{
+    width: 90%;
+    height: 90%;
+    left: 5%;
+    top: 5%;
+    position: absolute;
+    overflow-y: scroll;
+}
+.decode_text p{
+    width: 95%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    display: block;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.tool_list{
+    width: 36%;
+    height: 87%;
+    top: 8%;
+    left: 4%;
+    border-radius: 4rem;
+    position: absolute;
+    box-shadow: 2rem 2rem 3.5rem #0d0d0d,
+             -2rem -2rem 3.5rem #333333;
+}
+.tool_list_warp{
+    width: 95%;
+    height: 90%;
+    top: 5%;
+    right: 1%;
+    position: absolute;
+    overflow-y: scroll;
+}
+.tool_list_warp::-webkit-scrollbar, .decode_text_warp::-webkit-scrollbar{
+    width: 1rem;
+    border-radius: 0.5rem;
+}
+.tool_list_warp::-webkit-scrollbar-track, .decode_text_warp::-webkit-scrollbar-track{
+    background-color: #303030;
+    border-radius: 0.5rem;
+}
+.tool_list_warp::-webkit-scrollbar-thumb, .decode_text_warp::-webkit-scrollbar-thumb{
+    background-color: violet;
+    border-radius: 0.5rem;
+}
+.tool{
+    width: 40%;
+    height: 40%;
+    background-color: #181819;
+    border-radius: 2rem;
+    box-shadow: 0 0 2rem inset #0d0d0d;
+    float: left;
+    margin: 4%;
+}
+.tool p{
+    font-size: 4rem;
+    text-align: center;
+    color: aliceblue;
+}
+.tool a{
+    font-size: 4rem;
+    text-align: center;
+    text-decoration: none;
+    color: violet;
+    display: block;
+}
+.tool a:hover{
+    color: slateblue;
+}
+/*希尔专属*/
+.encode_text_hill{
+    width: 100%;
+    height: 28%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    border-radius: 4rem;
+    background-color: #181819;
+    box-shadow: 0 0 15px inset #0d0d0d;
+}
+.encode_text_hill textarea{
+    width: 90%;
+    height: 80%;
+    left: 5%;
+    top: 10%;
+    position: absolute;
+    color: aliceblue;
+    font-size: 3rem;
+    font-family: "微软雅黑";
+    letter-spacing: 2px;
+    resize: none;
+    background: none;
+    border: none;
+    outline: none;
+}
+.mode_change_hill{
+    width: 70%;
+    height: 12%;
+    left: 0;
+    top: 32%;
+    position: absolute;
+}
+.mode_change_hill input{
+    visibility: hidden;
+    position: absolute;
+}
+.mode_change_hill input:checked+label{
+    color: violet;
+}
+.mode_change_hill label{
+    width: 20%;
+    height: 100%;
+    border-radius: 3rem;
+    display: block;
+    float: left;
+    margin-left: 4%;
+    font-size: 3rem;
+    color: gray;
+    text-align: center;
+    background-color: #181819;
+    line-height: 7rem;
+    box-shadow: 0 0 15px inset #0d0d0d;
+}
+#s_key{
+    width: 70%;
+    height: 12%;
+    left: 2%;
+    top: 48%;
+    position: absolute;
+    background-color: #181819;
+    border-radius: 3rem;
+    box-shadow: 0 0 2rem inset #0d0d0d;
+}
+#s_key textarea{
+    width: 90%;
+    height: 80%;
+    left: 5%;
+    top: 10%;
+    position: absolute;
+    color: aliceblue;
+    font-size: 3rem;
+    font-family: "微软雅黑";
+    letter-spacing: 0.2rem;
+    resize: none;
+    background: none;
+    border: none;
+    outline: none;
+}
+.decode_text_hill{
+    font-size: 3rem;
+    color: aliceblue;
+    width: 100%;
+    height: 28%;
+    left: 0;
+    top: 65%;
+    border-radius: 4rem;
+    background-color: #181819;
+    position: absolute;
+    box-shadow: 0 0 2rem inset #0d0d0d;
+}
+/**/

@@ -1,0 +1,96 @@
+.notice_warp {
+    width: 100%;
+    height: 80%;
+    top: 15%;
+    left: 0;
+    position: absolute;
+}
+.left {
+    width: 64%;
+    height: 88%;
+    left: 5%;
+    top: 8%;
+    position: absolute;
+}
+.right{
+    width: 20%;
+    height: 88%;
+    background-color: #202020;
+    right: 4%;
+    top: 8%;
+    position: absolute;
+    border-radius: 6rem;
+    box-shadow: 2rem 2rem 3.5rem #0d0d0d,
+             -2rem -2rem 3.5rem #333333;
+    /*box-shadow: inset 15px 15px 30px #0d0d0d,
+             inset -15px -15px 30px #333333;*/
+}
+.content{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position: absolute;
+    border-radius: 6rem;
+    box-shadow: 2rem 2rem 3.5rem #0d0d0d,
+             -2rem -2rem 3.5rem #333333;
+}
+.content h3{
+    width: 80%;
+    left: 10%;
+    top: -4%;
+    color: lightgray;
+    font-size: 6rem;
+    position: absolute;
+    letter-spacing: 1rem;
+    text-align: center;
+}
+.content pre{
+    width: 80%;
+    left: 10%;
+    top: 15%;
+    color: lightgray;
+    font-size: 3.5rem;
+    text-indent: 6rem;
+    position: absolute;
+    white-space: pre-wrap;
+    font-family: "微软雅黑";
+}
+.content span{
+    bottom: 5%;
+    right: 5%;
+    font-size: 3rem;
+    color: lightgray;
+    position: absolute;
+}
+.right p{
+    text-align: center;
+    font-size: 4rem;
+    color: aliceblue;
+}
+.catalog{
+    height: 75%;
+    width: 80%;
+    left: 10%;
+    bottom: 10%;
+    position: absolute;
+    overflow-y: scroll;
+}
+.catalog a{
+    text-decoration: none;
+    color: violet;
+}
+.catalog a:hover{
+    color: slateblue;
+}
+.catalog::-webkit-scrollbar{
+    width: 1rem;
+    border-radius: 0.5rem;
+}
+.catalog::-webkit-scrollbar-track{
+    background-color: #303030;
+    border-radius: 0.5rem;
+}
+.catalog::-webkit-scrollbar-thumb{
+    background-color: violet;
+    border-radius: 0.5rem;
+}
