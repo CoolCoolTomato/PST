@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block static %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'index/topic.css' %}">
+{% endblock %}
+{% block title %}
+<title>刷题</title>
+{% endblock %}
+{% block body %}
+    <div class="topic_warp">
+        <div class="tt beef">
+            <p class="topic_title">牛客</p>
+            <p class="topic_content">包含笔试题库，面试题库，算法题库，并且带有招聘系统。</p>
+            <a href="https://www.nowcoder.com/exam/company" target="_blank">开始学习</a>
+        </div>
+        <div class="tt leetcode">
+            <p class="topic_title">力扣</p>
+            <p class="topic_content">拥有庞大的算法，数据库题库，适合所有学习阶段的人群。</p>
+            <a href="https://leetcode.cn/problemset/all/" target="_blank">开始学习</a>
+        </div>
+        <div class="tt blue">
+            <p class="topic_title">蓝桥</p>
+            <p class="topic_content">分三种难度练习题和蓝桥杯历届真题，真题难度较高，适合算法竞赛人群。</p>
+            <a href="http://lx.lanqiao.cn/" target="_blank">开始学习</a>
+        </div>
+        <div class="tt hiho">
+            <p class="topic_title">hihocoder</p>
+            <p class="topic_content">拥有海量算法题，难度划分为五个等级，适合所有学习阶段的人群。</p>
+            <a href="http://www.hihocoder.com/problemset" target="_blank">开始学习</a>
+        </div>
+        <div class="tt pytip">
+            <p class="topic_title">PythonTip</p>
+            <p class="topic_content">题库有三种难度的算法题，中等居多，适合算法初学者。</p>
+            <a href="http://www.pythontip.com/coding/code_oj" target="_blank">开始学习</a>
+        </div>
+        <div class="tt lint">
+            <p class="topic_title">炼码</p>
+            <p class="topic_content">包含各种类型的题库，适合学习范围广的人群巩固知识。</p>
+            <a href="https://www.lintcode.com/problem/" target="_blank">开始学习</a>
+        </div>
+        <div class="tt saima">
+            <p class="topic_title">赛码</p>
+            <p class="topic_content">对算法题进行了明确的分类，使用于针对性的算法学习，并收录了名企真题。</p>
+            <a href="https://www.acmcoder.com/#/practice/code" target="_blank">开始学习</a>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block static %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static "index/feedback.css" %}">
+    {% if messages %}
+    <script>
+        {% for msg in messages %}
+            alert('{{ msg.message }}');
+        {% endfor %}
+    </script>
+    {% endif %}
+{% endblock %}
+{% block title %}
+<title>反馈</title>
+{% endblock %}
+{% block body %}
+    <div class="feedback_warp">
+        <div class="hint">
+                <h2>反馈系统</h2>
+                <p>感谢您对本站的支持，如果您对本站有什么建议，
+                    或者是发现本站的Bug，内容错误,可以在右边写下您想反馈内容，我们会即时做出修改并给您答复。
+                </p>
+        </div>
+        <div class="forms">
+            <form method="post">
+                {% csrf_token %}
+                <div class="feedback_submit">
+                    <input type="submit" value="^">
+                </div>
+                <div class="kind_warp">
+                    <div class="kind_warp_p">
+                        <p>问题类型:</p>
+                    </div>
+                    <div class="kind">
+                        <select name="kind">
+                            <option></option>
+                            <option>网站Bug</option>
+                            <option>内容错误</option>
+                            <option>网站建议</option>
+                            <option>其他问题</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="contact_warp">
+                    <div class="contact">
+                        <input type="text" placeholder="联系方式(选填)" autocomplete="off" name="contact">
+                    </div>
+                </div>
+                <div class="details">
+                    <textarea placeholder="请输入您想反馈的内容" name="content"></textarea>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

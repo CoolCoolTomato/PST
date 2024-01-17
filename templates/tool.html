@@ -1,0 +1,309 @@
+{% extends "base.html" %}
+{% block static %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'index/tool.css' %}">
+{% endblock %}
+{% block title %}
+<title>工具</title>
+{% endblock %}
+{% block body %}
+    <div class="tool_warp">
+        <div class="workbench">
+            {% if t %}
+                <!--base85-->
+                {% if t == "base85" %}
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="encode_text">
+                            <textarea placeholder="输入您的串儿" name="encode_text"></textarea>
+                        </div>
+                        <div class="mode_change">
+                            <p>Base85</p>
+                            <input type="radio" name="tool_mode" value="e" id="tool_e" checked>
+                            <label for="tool_e">加密</label>
+                            <input type="radio" name="tool_mode" value="d" id="tool_d">
+                            <label for="tool_d">解密</label>
+                        </div>
+                        <input type="submit" value="提交">
+                    </form>
+                    <div class="decode_text">
+                        {% if res %}
+                            <div class="decode_text_warp">
+                                <p>{{ res }}</p>
+                            </div>
+                        {% endif %}
+                    </div>
+                {% endif %}
+                <!--base64-->
+                {% if t == "base64" %}
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="encode_text">
+                            <textarea placeholder="输入您的串儿" name="encode_text"></textarea>
+                        </div>
+                        <div class="mode_change">
+                            <p>Base64</p>
+                            <input type="radio" name="tool_mode" value="e" id="tool_e" checked>
+                            <label for="tool_e">加密</label>
+                            <input type="radio" name="tool_mode" value="d" id="tool_d">
+                            <label for="tool_d">解密</label>
+                        </div>
+                        <input type="submit" value="提交">
+                    </form>
+                    <div class="decode_text">
+                        {% if res %}
+                            <div class="decode_text_warp">
+                                <p>{{ res }}</p>
+                            </div>
+                        {% endif %}
+                    </div>
+                {% endif %}
+                <!--base32-->
+                {% if t == "base32" %}
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="encode_text">
+                            <textarea placeholder="输入您的串儿" name="encode_text"></textarea>
+                        </div>
+                        <div class="mode_change">
+                            <p>Base32</p>
+                            <input type="radio" name="tool_mode" value="e" id="tool_e" checked>
+                            <label for="tool_e">加密</label>
+                            <input type="radio" name="tool_mode" value="d" id="tool_d">
+                            <label for="tool_d">解密</label>
+                        </div>
+                        <input type="submit" value="提交">
+                    </form>
+                    <div class="decode_text">
+                        {% if res %}
+                            <div class="decode_text_warp">
+                                <p>{{ res }}</p>
+                            </div>
+                        {% endif %}
+                    </div>
+                {% endif %}
+                <!--base16-->
+                {% if t == "base16" %}
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="encode_text">
+                            <textarea placeholder="输入您的串儿" name="encode_text"></textarea>
+                        </div>
+                        <div class="mode_change">
+                            <p>Base16</p>
+                            <input type="radio" name="tool_mode" value="e" id="tool_e" checked>
+                            <label for="tool_e">加密</label>
+                            <input type="radio" name="tool_mode" value="d" id="tool_d">
+                            <label for="tool_d">解密</label>
+                        </div>
+                        <input type="submit" value="提交">
+                    </form>
+                    <div class="decode_text">
+                        {% if res %}
+                            <div class="decode_text_warp">
+                                <p>{{ res }}</p>
+                            </div>
+                        {% endif %}
+                    </div>
+                {% endif %}
+                <!--url-->
+                {% if t == "url" %}
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="encode_text">
+                            <textarea placeholder="输入您的串儿" name="encode_text"></textarea>
+                        </div>
+                        <div class="mode_change">
+                            <p>URL</p>
+                            <input type="radio" name="tool_mode" value="e" id="tool_e" checked>
+                            <label for="tool_e">编码</label>
+                            <input type="radio" name="tool_mode" value="d" id="tool_d">
+                            <label for="tool_d">解码</label>
+                        </div>
+                        <input type="submit" value="提交">
+                    </form>
+                    <div class="decode_text">
+                        {% if res %}
+                            <div class="decode_text_warp">
+                                <p>{{ res }}</p>
+                            </div>
+                        {% endif %}
+                    </div>
+                {% endif %}
+                <!--md5-->
+                {% if t == "md5" %}
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="encode_text">
+                            <textarea placeholder="输入您的串儿" name="encode_text"></textarea>
+                        </div>
+                        <div class="mode_change">
+                            <p>MD5</p>
+                        </div>
+                        <input type="submit" value="加密">
+                    </form>
+                    <div class="decode_text">
+                        {% if res %}
+                            <div class="decode_text_warp">
+                                <p>{{ res }}</p>
+                            </div>
+                        {% endif %}
+                    </div>
+                {% endif %}
+                <!--hex_ascii-->
+                {% if t == "hex_ascii" %}
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="encode_text">
+                            <textarea placeholder="输入您的串儿" name="encode_text"></textarea>
+                        </div>
+                        <div class="mode_change">
+                            <p>编码互转</p>
+                            <input type="radio" name="tool_mode" value="hta" id="tool_e" checked>
+                            <label for="tool_e">转ascii</label>
+                            <input type="radio" name="tool_mode" value="ath" id="tool_d">
+                            <label for="tool_d">转16进制</label>
+                        </div>
+                        <input type="submit" value="转换">
+                    </form>
+                    <div class="decode_text">
+                        {% if res %}
+                            <div class="decode_text_warp">
+                                <p>{{ res }}</p>
+                            </div>
+                        {% endif %}
+                    </div>
+                {% endif %}
+                <!--ord_ascii-->
+                {% if t == "ord_ascii" %}
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="encode_text">
+                            <textarea placeholder="输入您的串儿(十进制用/隔开)" name="encode_text"></textarea>
+                        </div>
+                        <div class="mode_change">
+                            <p>编码互转</p>
+                            <input type="radio" name="tool_mode" value="ota" id="tool_e" checked>
+                            <label for="tool_e">转ascii</label>
+                            <input type="radio" name="tool_mode" value="ato" id="tool_d">
+                            <label for="tool_d">转10进制</label>
+                        </div>
+                        <input type="submit" value="转换">
+                    </form>
+                    <div class="decode_text">
+                        {% if res %}
+                            <div class="decode_text_warp">
+                                <p>{{ res }}</p>
+                            </div>
+                        {% endif %}
+                    </div>
+                {% endif %}
+                <!--hex_utf8-->
+                {% if t == "hex_utf8" %}
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="encode_text">
+                            <textarea placeholder="输入您的串儿(十六进制用/隔开)" name="encode_text"></textarea>
+                        </div>
+                        <div class="mode_change">
+                            <p>编码互转</p>
+                            <input type="radio" name="tool_mode" value="htu" id="tool_e" checked>
+                            <label for="tool_e">转UTF-8</label>
+                            <input type="radio" name="tool_mode" value="uth" id="tool_d">
+                            <label for="tool_d">转16进制</label>
+                        </div>
+                        <input type="submit" value="转换">
+                    </form>
+                    <div class="decode_text">
+                        {% if res %}
+                            <div class="decode_text_warp">
+                                <p>{{ res }}</p>
+                            </div>
+                        {% endif %}
+                    </div>
+                {% endif %}
+                <!--hill-->
+                {% if t == "hill" %}
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="encode_text_hill">
+                            <textarea placeholder="输入您的串儿" name="encode_text"></textarea>
+                        </div>
+                        <div class="mode_change_hill">
+                            <input type="radio" name="tool_mode_1" value="e" id="tool_e" checked>
+                            <label for="tool_e">加密</label>
+                            <input type="radio" name="tool_mode_1" value="d" id="tool_d">
+                            <label for="tool_d">解密</label>
+                            <input type="radio" name="tool_mode_2" value="0" id="tool_0" checked>
+                            <label for="tool_d">A=0</label>
+                            <input type="radio" name="tool_mode_2" value="1" id="tool_1">
+                            <label for="tool_1">A=1</label>
+                        </div>
+                        <div id="s_key">
+                            <textarea placeholder="输入您的密钥" name="s_key"></textarea>
+                        </div>
+                        <input type="submit" value="提交">
+                    </form>
+                    <div class="decode_text_hill">
+                        {% if res %}
+                            <div class="decode_text_warp">
+                                <p>{{ res }}</p>
+                            </div>
+                        {% endif %}
+                    </div>
+                {% endif %}
+            {% else %}
+                <div class="tool_hello">
+                Hello!
+                </div>
+            {% endif %}
+        </div>
+        <div class="tool_list">
+            <div class="tool_list_warp" dir="rtl">
+                <div class="base64 tool">
+                    <p>Base85</p>
+                    <a href="{% url 'tool' %}?tool=base85">加密/解密</a>
+                </div>
+                <div class="base64 tool">
+                    <p>Base64</p>
+                    <a href="{% url 'tool' %}?tool=base64">加密/解密</a>
+                </div>
+                <div class="base64 tool">
+                    <p>Base32</p>
+                    <a href="{% url 'tool' %}?tool=base32">加密/解密</a>
+                </div>
+                <div class="base64 tool">
+                    <p>Base16</p>
+                    <a href="{% url 'tool' %}?tool=base16">加密/解密</a>
+                </div>
+                <div class="tool">
+                    <p>URL</p>
+                    <a href="{% url 'tool' %}?tool=url">编码/解码</a>
+                </div>
+                <div class="tool">
+                    <p>MD5</p>
+                    <a href="{% url 'tool' %}?tool=md5">加密</a>
+                </div>
+                <div class="tool">
+                    <p style="font-size: 3rem; line-height: 210%">16进制与ascii</p>
+                    <a href="{% url 'tool' %}?tool=hex_ascii">转换</a>
+                </div>
+                <div class="tool">
+                    <p style="font-size: 3rem; line-height: 210%">10进制与ascii</p>
+                    <a href="{% url 'tool' %}?tool=ord_ascii">转换</a>
+                </div>
+                <div class="tool">
+                    <p style="font-size: 3rem; line-height: 210%">16进制与UTF-8</p>
+                    <a href="{% url 'tool' %}?tool=hex_utf8">转换</a>
+                </div>
+                <div class="tool">
+                    <p>希尔</p>
+                    <a href="{% url 'tool' %}?tool=hill">加密/解密</a>
+                </div>
+                <div class="tool">
+                    <p>= o =</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

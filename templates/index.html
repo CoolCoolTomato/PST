@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% block static %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static "index/index.css" %}">
+{% endblock %}
+{% block title %}
+<title>Python技能树</title>
+{% endblock %}
+{% block body %}
+    <div class="index_warp">
+        <div class="slider_warp">
+            <div class="slider_show">
+                <div class="slides">
+                    <input type="radio" name="r" id="r1" checked>
+                    <input type="radio" name="r" id="r2">
+                    <input type="radio" name="r" id="r3">
+                    <input type="radio" name="r" id="r4">
+                    <input type="radio" name="r" id="r5">
+                    <div class="slide s1">
+                        <h2 class="title">Python基础</h2>
+                        <p>Python基础语法，包括对象操作支持，异常处理，装饰器;内置函数，包括序列统计函数，数据处理函数，format(); 常用内置库，如re，math，time;并且提供各种列表，包括格式化标记，正则匹配符，转义字符，以便查询。</p>
+                        <a href="{% url 'app_1' 1 %}" target="_blank">开始学习</a>
+                    </div>
+                    <div class="slide">
+                        <h2 class="title">算法设计</h2>
+                        <p>对算法问题进行进行分类，包括排序算法，查找，深度优先搜索算法，广度优先搜索算法，回溯算法，最短路径算法等常见算法。每种算法又包含若干案例，如排序算法包含了冒泡排序，归并排序，希尔排序等案例，并给出相关代码。</p>
+                        <a href="{% url 'app_2' %}" target="_blank">开始学习</a>
+                    </div>
+                    <div class="slide">
+                        <h2 class="title">网络爬虫</h2>
+                        <p>对爬虫应用进行整理。总结了python爬虫常用库的使用方法，包括request，bs4，selenium等，并且提供使用模板。收集了实用的爬虫应用与API，简化数据获取流程，或提供其他服务，为应对反爬措施提供一定的手段。</p>
+                        <a href="{% url 'app_3' %}" target="_blank">开始学习</a>
+                    </div>
+                    <div class="slide">
+                        <h2 class="title">Django</h2>
+                        <p>Django是一个开源的Web框架，能够简便，快速地开发数据库驱动的网站，并且采用了MTV的框架模式，即Model，Template，Views。此外，Django有许多功能强大的第三方插件，可以快速开发出自己的工具包，这使Django有很强的扩展性。</p>
+                        <a href="{% url 'app_4' %}" target="_blank">开始学习</a>
+                    </div>
+                    <div class="slide">
+                        <h2 class="title">人工智能</h2>
+                        <p>开发中...</p>
+                    </div>
+                </div>
+                <div class="navigation">
+                    <label for="r1" class="bar"></label>
+                    <label for="r2" class="bar"></label>
+                    <label for="r3" class="bar"></label>
+                    <label for="r4" class="bar"></label>
+                    <label for="r5" class="bar"></label>
+                </div>
+            </div>
+        </div>
+        <div class="msg">
+            <p>根据您的需求选择您的学习方向，或者进入下方外部链接开始学习</p>
+        </div>
+        <div class="outer">
+            <div class="recommend">
+                <div class="bzd"></div>
+                <div class="work">
+                    <p>去刷题</p>
+                    <span>算法题，概念题，面试题</span>
+                    <p><a href="{% url 'topic' %}">学到更多</a></p>
+                </div>
+                <div class="subject">
+                    <p>更多项目</p>
+                    <span>爬虫，web，AI项目实践</span>
+                    <p><a href="/">学到更多</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

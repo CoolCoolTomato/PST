@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block static %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'app_3/app_3.css' %}">
+{% endblock %}
+{% block title %}
+<title>网络爬虫</title>
+{% endblock %}
+{% block body %}
+    <div class="app_3_warp">
+        {% if modes %}
+            <!--首页/列表-->
+            <div class="app_3_title">
+                <h2>爬虫模块</h2>
+            </div>
+            <div class="mode_warp">
+                <div class="mode_contain">
+                    {% for mode in modes %}
+                        <input type="radio" name="mode" id="{{ forloop.counter0 }}" {% if forloop.first %}checked{% endif %}>
+                        <div class="mode">
+                            <div class="app_3_msg">
+                                <p>{{ mode.mode }}</p>
+                                <p>{{ mode.brief }}</p>
+                            </div>
+                            <a href="{% url 'app_3' %}?id={{ mode.id }}" target="_blank" class="mode_a_l">详细信息</a>
+                            <a href="{% url 'app_3' %}?way={{ mode.id }}" target="_blank" class="mode_a_r">使用模板</a>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="app_3_select">
+                    {% for mode in modes %}
+                        <label for="{{ forloop.counter0 }}"></label>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="app_3_tool app_3_other">
+                <h2>爬虫工具</h2>
+                <p>Charles，fiddler，burpsuite，Packet Capture等工具，能够进行数据抓包，篡改等功能，用于辅助爬虫进行数据爬取。</p>
+                <a href="{% url 'app_3_tool' %}" target="_blank">了解详情</a>
+            </div>
+            <div class="app_3_api app_3_other">
+                <h2>爬虫API</h2>
+                <p>为爬虫提供各种信息或功能。信息类API提供天气，航班等内容，简化基础信息获取流程。功能类API提供翻译，验证码识别等服务。</p>
+                <a href="{% url 'app_3_api' %}" target="_blank">了解详情</a>
+            </div>
+        {% elif the_way %}
+            <!--使用方式-->
+            <div id="the_way">
+                <pre>{{ the_way }}</pre>
+            </div>
+        {% else %}
+            <!--有id，显示内容-->
+            <div class="app_3_content_warp">
+                <div class="app_3_content_left">
+                    <div class="app_3_content_left_warp">
+                        {% if contents %}
+                            {% for c in contents %}
+                                <div class="app_3_content">
+                                    <div class="app_3_content_1">
+                                        <p>{{ c.name }}</p>
+                                        <p>{{ c.content }}</p>
+                                    </div>
+                                    <div class="app_3_content_2">
+                                        <p>{{ c.way }}</p>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        {% else %}
+                            <p style="color: aliceblue;font-size: 40px">请选择一个内容</p>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="app_3_content_right">
+                    <p>{{ mode.mode }}</p>
+                    <div class="app_3_title_select">
+                        {% for t in titels %}
+                            <p><a href="{% url 'app_3' %}?id={{ mode.id }}&title={{ t.title }}">{{ t.title }}</a></p>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block static %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'app_2/app_2.css' %}">
+{% endblock %}
+{% block title %}
+<title>算法设计</title>
+{% endblock %}
+{% block body %}
+    <div class="app_2_warp">
+        <div class="app_2_left">
+            <div class="cc_warp">
+                <input type="radio" name="r2" id="r21" checked>
+                <input type="radio" name="r2" id="r22">
+                <div class="app_2_content">
+                    {% if chapter %}
+                        <pre>{{ chapter.content }}</pre>
+                    {% else %}
+                        <p>您还没选择内容</p>
+                    {% endif %}
+                </div>
+                <div class="app_2_code">
+                    {% if chapter %}
+                        <pre>{{ chapter.codes }}</pre>
+                    {% else %}
+                        <p>您还没选择内容</p>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="app_2_change_l">
+                    <label for="r21" id="l21"><img src="{% static 'content.png' %}"></label>
+                    <label for="r22" id="l22"><img src="{% static 'code.png' %}"></label>
+            </div>
+            <div class="app_2_change_r">
+                <label for="r21_" id="l21_"></label>
+                <label for="r22_" id="l22_"></label>
+            </div>
+        </div>
+        <div class="app_2_right">
+            <input type="radio" name="r2_" id="r21_">
+            <input type="radio" name="r2_" id="r22_" checked>
+            <div class="app_2_chapter app_2_list">
+                <p>目录</p>
+                <div class="app_2_scroll">
+                    {% for s in sections %}
+                        <p><a href="{% url 'app_2' %}?id={{ s.id }}">{{ s.title }}</a></p>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="app_2_title app_2_list">
+                {% if section %}
+                <p>{{ section.title }}</p>
+                    <div class="app_2_scroll">
+                        {% for c in chapters %}
+                            <p><a href="{% url 'app_2' %}?id={{ section.id }}&title={{ c.title }}">{{ c.title }}</a></p>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                <p>没有选择章节</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

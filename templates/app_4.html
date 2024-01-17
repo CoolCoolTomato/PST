@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block static %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'app_4/app_4.css' %}">
+    <script rel="script" src="{% static 'app_4/app_4.js' %}"></script>
+{% endblock %}
+{% block title %}
+<title>Django</title>
+{% endblock %}
+{% block body %}
+<div class="app_4_warp">
+    <div id="app_4_left">
+        <div id="app_4_content">
+            {% if section %}
+                <pre>{{ section.content }}</pre>
+            {% else %}
+                <p style="font-size: 30px; color: violet">你好</p>
+            {% endif %}
+        </div>
+    </div>
+    <div id="app_4_right">
+        <p>目录</p>
+        <div id="app_4_list">
+            {% for c in chapters %}
+                <div id="{{ c.id }}">
+                    <p onclick="app_4({{ c.id }})">{{ c.chapter }}</p>
+                    {% for s in sections %}
+                        {% if s.chapter.id == c.id %}
+                            <a href="{% url 'app_4' %}?s={{ s.section }}">{{ s.section }}</a>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

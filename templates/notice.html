@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block static %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'index/notice.css' %}">
+{% endblock %}
+{% block title %}
+    <title>公告</title>
+{% endblock %}
+{% block body %}
+    <div class="notice_warp">
+        <div class="left">
+            <div class="content">
+                <h3>{{ content.title }}</h3>
+                <pre>{{ content.content }}</pre>
+                <span>{{ content.times }}</span>
+            </div>
+        </div>
+        <div class="right">
+            <p>目录</p>
+            <div class="catalog">
+                {% for it in notices %}
+                    <p><a href="{% url 'notice' it.id %}">{{ it.title }}</a></p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block static %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static "app_1/app_1.css" %}">
+{% endblock %}
+{% block title %}
+<title>python基础</title>
+{% endblock %}
+{% block body %}
+    <div class="app_1_warp">
+        <div class="left">
+            <div class="content">
+                <div class="dodo">
+                    {% for it in content_list%}
+                        <div>
+                        <p class="name">{{ it.name }}</p>
+                        <p>{{ it.content }}</p>
+                        </div>
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <p>目录</p>
+            <div class="catalog">
+                {% for it in titles %}
+                    <p><a href="{% url 'app_1' it.id %}">{{ it.title }}</a></p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

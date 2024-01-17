@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static "base.css" %}">
+    <script rel="script" src="{% static 'base.js' %}"></script>
+    {% block static %}
+    {% endblock %}
+    <meta charset="UTF-8">
+    {% block title %}
+    <title>共用模板</title>
+    {% endblock %}
+    <base href="/">
+</head>
+<body>
+    <div class="index_list">
+        <div class="logo"><img src="{% static 'logo.png' %}"></div>
+        <div class="form">
+            <form action="{% url 'search' %}" method="get">
+                <input name="q" type="text" class="search" placeholder="搜索" autocomplete="off">
+                <input type="submit" class="btn" value="">
+            </form>
+        </div>
+        <div class="warp_btn">
+            <div class="button">
+                <div class="img">
+                    <img src="{% static 'tool.png' %}">
+                </div>
+                <a href="{% url 'tool' %}" target="_blank">工具</a>
+            </div>
+            <div class="button">
+                <div class="img">
+                    <img src="{% static 'feedback.png' %}">
+                </div>
+                <a href="{% url 'feedback' %}" target="_blank">反馈</a>
+            </div>
+            <div class="button">
+                <div class="img">
+                    <img src="{% static 'notice.png' %}">
+                </div>
+                <a href="{% url 'notice' 0 %}" target="_blank">公告</a>
+            </div>
+            <div class="button">
+                <div class="img">
+                    <img src="{% static 'main.png' %}">
+                </div>
+                <a href="{% url 'index' %}">首页</a>
+            </div>
+        </div>
+    </div>
+    {% block body %}
+    {% endblock %}
+    <div class="safe">
+        <a href="https://leafbackaut.cn" target="_blank">@木叶归秋</a>
+        <span>|</span>
+        <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">湘ICP备2022014960号</a>
+        <span>|</span>
+        <a href="https://www.beian.gov.cn/portal/registerSystemInfo" target="_blank">湘公网安备43011102002241号</a>
+    </div>
+</body>
+</html>

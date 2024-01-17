@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block static %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static "search/search.css" %}">
+{% endblock %}
+{% block title %}
+<title>搜索</title>
+{% endblock %}
+{% block body %}
+    {% load highlight %}
+    <div id="search_warp">
+        {% if res %}
+            <p id="search_res">{{ res }}</p>
+        {% endif %}
+        {% if not page %}
+            <p id="search_res">什么也没找到</p>
+        {% endif %}
+        <div id="search_contain">
+            <div id="search_result">
+            {% if page %}
+                {% for item in page.object_list %}
+                {% if item.app_label == "app_1" %}
+                    <div class="search_app_1 search_result">
+                        <p>{% highlight item.object.name with query max_length 80 %}</p>
+                        <p>{% highlight item.object.content with query max_length 80 %}</p>
+                        <a href="{% url 'app_1' item.object.headline.id %}">查看</a>
+                    </div>
+                {% endif %}
+                {% if item.app_label == "app_2" %}
+                    <div class="search_app_2 search_result">
+                        <p>{% highlight item.object.title with query max_length 40 %}</p>
+                        <p>{% highlight item.object.content with query max_length 80 %}</p>
+                        <a href="{% url 'app_2' %}?id={{ item.object.headline.id }}&title={{ item.object.title }}">查看</a>
+                    </div>
+                {% endif %}
+                {% if item.app_label == "app_3" %}
+                    <div class="search_app_3 search_result">
+                        <p>{% highlight item.object.title with query max_length 40 %}</p>
+                        <p>{% highlight item.object.name with query max_length 40 %}</p>
+                        <p>{% highlight item.object.content with query max_length 40 %}</p>
+                        <p>{% highlight item.object.way with query max_length 40 %}</p>
+                        <a href="{% url 'app_3' %}?id={{ item.object.title.mode.id }}&title={{ item.object.title }}">查看</a>
+                    </div>
+                {% endif %}
+                {% if item.app_label == "app_4" %}
+                    <div class="search_app_4 search_result">
+                        <p>{% highlight item.object.chapter with query max_length 50 %}</p>
+                        <p>{% highlight item.object.section with query max_length 50 %}</p>
+                        <p>{% highlight item.object.content with query max_length 50 %}</p>
+                        <a href="{% url 'app_4' %}?s={{ item.object.section }}">查看</a>
+                    </div>
+                {% endif %}
+            {% endfor %}
+            {% endif %}
+        </div>
+        </div>
+        <div id="search_bar">
+            {% if page.has_previous %}
+                <a href="{% url 'search' %}?q={{ query }}&page={{ page.previous_page_number }}">上一页</a>
+            {% endif %}
+            {% if page.has_next %}
+                <a href="{% url 'search' %}?q={{ query }}&page={{ page.next_page_number }}">下一页</a>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
